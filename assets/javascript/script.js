@@ -67,7 +67,7 @@ database.ref().on("child_added", function (snapshot) {
   // minutes until next train arrives
   var nextTrain = moment().add(minutesTil, "minutes");
   // adds arrival time text
-  var nextArrivalTd = $("<td>").text(moment(nextTrain).format("hh:mm"));
+  var nextArrivalTd = $("<td>").text(moment(nextTrain).format("hh:mm A"));
   // adds all tds to the row created
   tRow.append(trainTd, destinationTd, frequencyTd, nextArrivalTd, minutesAwayTd);
   // adds the new row to the table 
