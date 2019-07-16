@@ -7,13 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <title>Train Time!</title>
-     <!-- MOMENT JS CDN -->
+     <!-- MOMENTJS-->
      <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 
@@ -33,7 +36,7 @@
                  <table class="table table-striped">
                     <thead>
                         <tr class="bg-success text-light tableHeader">
-                            <th scope="col">Current Train Schedule</th>
+                            <th class="biggerText" scope="col">Current Train Schedule</th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -42,11 +45,11 @@
                         </tr>
                         <tr>
 
-                            <th scope="col">Train Name</th>
-                            <th scope="col">Destination</th>
-                            <th scope="col">Frequency (min)</th>
-                            <th scope="col">Next Arrival</th>
-                            <th scope="col">Minutes Away</th>
+                            <th scope="col" class="tableHead">Train Name</th>
+                            <th scope="col" class="tableHead">Destination</th>
+                            <th scope="col" class="tableHead">Frequency (min)</th>
+                            <th scope="col" class="tableHead">Next Arrival</th>
+                            <th scope="col" class="tableHead">Minutes Away</th>
                     </thead>
                     <tbody>
                     </tbody>
@@ -64,7 +67,7 @@
                         <form>
                             <div class="form-group">
                                 <label for="name">Train Name</label>
-                                <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp"
+                                <input type="text" class="form-control" id="inputName" 
                                     placeholder="Name that train!">
                             </div>
                             <div class="form-group">
@@ -73,7 +76,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="firstTrainTime">First Train Time (HH:mm - military time</label>
-                                <input type="time" class="form-control" id="inputTrainTime" aria-describedby="emailHelp">
+                                <input type="text" class="form-control" id="inputTrainTime" placeholder="HH:mm">
                             </div>
                             <div class="form-group">
                                 <label for="frequency">Frequency (min)</label>
